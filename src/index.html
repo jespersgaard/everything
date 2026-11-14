@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Everything – lokale apps</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem auto; max-width: 720px; padding: 0 1rem; color: #1f2937; }
+    h1 { margin-bottom: .25rem; }
+    p { color: #6b7280; margin-top: 0; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: .6rem .75rem; border-bottom: 1px solid #e5e7eb; }
+    th { background: #f3f4f6; }
+    a { color: #2563eb; text-decoration: none; font-weight: 600; }
+    a:hover { text-decoration: underline; }
+    code { color: #6b7280; }
+  </style>
+</head>
+<body>
+  <h1>Everything – lokale apps</h1>
+  <p>Linkene åbner hver app i en ny fane på samme server, som du åbnede denne side fra.</p>
+  <table>
+    <thead><tr><th>#</th><th>App</th><th>Port</th><th>Link</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+  <script>
+    const apps = [
+      ['Spreadsheet', 5180], ['Contacts', 5183], ['Contracts', 5184], ['Invoicing', 5187],
+      ['Notes', 5189], ['Projects', 5190], ['Tasks', 5193], ['Documents', 5196],
+      ['Whiteboard', 5198], ['Survey', 5209], ['Presentation', 5202], ['Hiring', 5205], ['Help-Desk', 5206],
+    ];
+    const host = location.hostname || 'localhost';
+    const tbody = document.getElementById('rows');
+    apps.forEach(([name, port], i) => {
+      const url = `http://${host}:${port}/`;
+      const tr = document.createElement('tr');
+      const cells = [String(i + 1), name, String(port)];
+      cells.forEach((text, idx) => {
+        const td = document.createElement('td');
+        if (idx === 2) { const c = document.createElement('code'); c.textContent = text; td.appendChild(c); }
+        else td.textContent = text;
+        tr.appendChild(td);
+      });
+      const td = document.createElement('td');
+      const a = document.createElement('a');
+      a.href = url; a.target = '_blank'; a.rel = 'noopener'; a.textContent = url;
+      td.appendChild(a); tr.appendChild(td);
+      tbody.appendChild(tr);
+    });
+  </script>
+</body>
+</html>

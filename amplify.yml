@@ -91,75 +91,7 @@ applications:
       cache:
         paths:
           - node_modules/**/*
-  - appRoot: src/teamchat
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - nvm install 22
-            - npm ci
-        build:
-          commands:
-            - npm run build
-      artifacts:
-        baseDirectory: dist
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
-  - appRoot: src/records
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - nvm install 22
-            - npm ci
-        build:
-          commands:
-            - npm run build
-      artifacts:
-        baseDirectory: dist
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
   - appRoot: src/sudoku
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - nvm install 22
-            - npm ci
-        build:
-          commands:
-            - npm run build
-      artifacts:
-        baseDirectory: dist
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
-  - appRoot: src/email
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - nvm install 22
-            - npm ci
-        build:
-          commands:
-            - npm run build
-      artifacts:
-        baseDirectory: dist
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
-  - appRoot: src/meetings
     frontend:
       phases:
         preBuild:
@@ -295,23 +227,6 @@ applications:
       cache:
         paths:
           - node_modules/**/*
-  - appRoot: src/accounting
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - nvm install 22
-            - npm ci
-        build:
-          commands:
-            - npm run build
-      artifacts:
-        baseDirectory: dist
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
   - appRoot: src/assets
     frontend:
       phases:
@@ -330,23 +245,6 @@ applications:
         paths:
           - node_modules/**/*
   - appRoot: src/audio-studio
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - nvm install 22
-            - npm ci
-        build:
-          commands:
-            - npm run build
-      artifacts:
-        baseDirectory: dist
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
-  - appRoot: src/calendar
     frontend:
       phases:
         preBuild:
@@ -414,23 +312,6 @@ applications:
       cache:
         paths:
           - node_modules/**/*
-  - appRoot: src/crm
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - nvm install 22
-            - npm ci
-        build:
-          commands:
-            - npm run build
-      artifacts:
-        baseDirectory: dist
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
   - appRoot: src/help-desk
     frontend:
       phases:
@@ -441,40 +322,6 @@ applications:
         build:
           commands:
             # Also bundles the Puter worker into public/worker/.
-            - npm run build
-      artifacts:
-        baseDirectory: dist
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
-  - appRoot: src/expense
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - nvm install 22
-            - npm ci
-        build:
-          commands:
-            - npm run build
-      artifacts:
-        baseDirectory: dist
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
-  - appRoot: src/childcare
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - nvm install 22
-            - npm ci
-        build:
-          commands:
             - npm run build
       artifacts:
         baseDirectory: dist
@@ -534,41 +381,7 @@ applications:
       cache:
         paths:
           - node_modules/**/*
-  - appRoot: src/inventory
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - nvm install 22
-            - npm ci
-        build:
-          commands:
-            - npm run build
-      artifacts:
-        baseDirectory: dist
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
   - appRoot: src/invoicing
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - nvm install 22
-            - npm ci
-        build:
-          commands:
-            - npm run build
-      artifacts:
-        baseDirectory: dist
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
-  - appRoot: src/legal
     frontend:
       phases:
         preBuild:
@@ -619,23 +432,6 @@ applications:
       cache:
         paths:
           - node_modules/**/*
-  - appRoot: src/pos
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - nvm install 22
-            - npm ci
-        build:
-          commands:
-            - npm run build
-      artifacts:
-        baseDirectory: dist
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
   - appRoot: src/projects
     frontend:
       phases:
@@ -670,40 +466,6 @@ applications:
       cache:
         paths:
           - node_modules/**/*
-  - appRoot: src/shifts
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - nvm install 22
-            - npm ci
-        build:
-          commands:
-            - npm run build
-      artifacts:
-        baseDirectory: dist
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
-  - appRoot: src/signatures
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - nvm install 22
-            - npm ci
-        build:
-          commands:
-            - npm run build
-      artifacts:
-        baseDirectory: dist
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
   - appRoot: src/survey
     frontend:
       phases:
@@ -722,40 +484,6 @@ applications:
         paths:
           - node_modules/**/*
   - appRoot: src/tasks
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - nvm install 22
-            - npm ci
-        build:
-          commands:
-            - npm run build
-      artifacts:
-        baseDirectory: dist
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
-  - appRoot: src/time-tracking
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - nvm install 22
-            - npm ci
-        build:
-          commands:
-            - npm run build
-      artifacts:
-        baseDirectory: dist
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
-  - appRoot: src/wiki
     frontend:
       phases:
         preBuild:
